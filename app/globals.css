@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+* {
+  font-family: Outfit, sans-serif;
+}
+
+.font-Ovo {
+  font-family: Ovo, sans-serif;
+}
+
+/* Base (light theme by default) */
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --bg-opacity-50: rgba(255, 255, 255, 0.5);
+    --text: #000000;
+    --text-white: #ffffff;
+    --text-700: #374151; /* tailwind gray-700 */
+    --text-600: #4b5563; /* tailwind gray-600 */
+    --text-500: #6b7280; /* tailwind gray-500 */
+    --text-400: #9ca3af; /* tailwind gray-400 */
+    --text-white-80: #000000cc; /* 80% opacity black */
+    
+     /* Borders and hover */
+    --border-color: #9ca3af; /* tailwind gray-400 */
+    --border-color-400: var(--border-color);
+    --border-white-90: var(--border-color);
+    --hover-bg: #f5f3ff; /* light lavender tone for better visibility */
+
+    
+    --dark-shadow: 4px 4px #000;
+    --shadow-dark: var(--dark-shadow);
+    --light-shadow: 4px 4px #fff;
+    --shadow-white-20: 3px 3px 8px #0000001a; /* 10% opacity black */
+    --grid-auto: repeat(auto-fit, minmax(200px, 1fr));
+    --sidebar-menu-bg: #fff1f2;
+
+    /* New variable for buttons */
+    --btn-bg: #000000;
+    --btn-text: #ffffff;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-hover-bg: var(--hover-bg);
+    --card-white-bg: #fcfcfc; 
+  }
+
+  .dark {
+    --bg: #11001f;
+    --bg-opacity-50: rgba(0, 0, 0, 0.5);
+    --text: #ffffff;
+    --text-700: var(--text);
+    --text-white-80: #ffffffcc; /* 80% opacity white */
+    --dark-hover: #2a004a;
+    --dark-hover-bg: #1e0033;
+    --sidebar-menu-bg: #1e0033;
+    --border-color: rgba(255, 255, 255, 0.5);
+    --border-color-white: #ffffff;
+    --border-white-90: #ffffffe6; /* 90% opacity white */
+
+    --shadow-white-20: 3px 3px 8px #ffffff1a; /* 10% opacity white */
+
+    /* Override for dark mode */
+    --btn-bg: #11001f;
+    --btn-text: #ffffff;
+
+    /* Cards */
+    --card-bg: #1a002f;
+    --card-hover-bg: var(--dark-hover-bg);
+    --card-white-bg: #1e0033; 
+  }
+}
+
+/* Custom utilities for shadows */
+@layer utilities {
+  .shadow-dark {
+    box-shadow: 4px 4px #000;
+  }
+  .shadow-light {
+    box-shadow: 4px 4px #fff;
+  }
+}
